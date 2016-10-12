@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.junchaowang.hydrationdetect.HydrationStatus">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/photo">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo_blue"
+            android:id="@+id/imageView5"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="@string/dear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView5"
+            android:layout_alignLeft="@+id/imageView5"
+            android:layout_alignStart="@+id/imageView5"
+            android:layout_marginTop="24dp"
+            android:id="@+id/dear"
+            android:textSize="@dimen/text_size_large"/>
+
+        <TextView
+            android:text=":"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView5"
+            android:layout_toRightOf="@+id/textView5"
+            android:layout_toEndOf="@+id/textView5"
+            android:id="@+id/textView6"
+            android:textSize="@dimen/text_size_large"/>
+
+        <TextView
+            android:text="@string/name_from_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:textSize="@dimen/text_size_large"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_above="@+id/your_current_hydration_status_is"
+            android:layout_toRightOf="@+id/dear"
+            android:layout_toEndOf="@+id/dear" />
+
+        <TextView
+            android:text="Your current hydration status is"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:layout_height="wrap_content"
+            android:id="@+id/your_current_hydration_status_is"
+            android:layout_marginTop="13dp"
+            android:layout_below="@+id/dear"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/body_safe"
+            android:id="@+id/imageView6"
+            android:layout_marginTop="23dp"
+            android:layout_below="@+id/your_current_hydration_status_is"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="Hydrated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:id="@+id/textView13"
+            android:textSize="@dimen/text_size_large"
+            android:layout_below="@+id/imageView6"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:text="@string/Monthly_record"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/monthlybutton"
+            android:layout_alignBaseline="@+id/dailybutton"
+            android:layout_alignBottom="@+id/dailybutton"
+            android:layout_alignRight="@+id/imageView5"
+            android:layout_alignEnd="@+id/imageView5"
+            android:onClick="onClick"/>
+
+        <Button
+            android:text="@string/weekly_record"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/weeklybutton"
+            android:layout_alignBaseline="@+id/dailylybutton"
+            android:layout_alignBottom="@+id/dailybutton"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            />
+
+        <Button
+            android:text="@string/daily_record"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/dailybutton"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textView13"
+            android:layout_alignLeft="@+id/dear"
+            android:layout_alignStart="@+id/dear"
+            android:onClick="onClick"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:id="@+id/progressBar2" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
